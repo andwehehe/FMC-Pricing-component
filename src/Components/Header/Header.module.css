@@ -1,0 +1,47 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pricingToggle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+label {
+  font-size: 1rem;
+  color: var(--gray-400);
+}
+
+.radioToggle,
+.toggleCheckbox {
+  display: none;
+}
+
+.toggleSwitch {
+  display: flex;
+  width: 2.8rem;
+  height: 1.5rem;
+  border-radius: 2rem;
+  padding: 0.2rem;
+  background: var(--gradient);
+}
+
+.toggleBall {
+  height: 100%;
+  width: 47%;
+  border-radius: 50%;
+  background-color: var(--blue-50);
+}
+
+.pricingToggle:has(.radioMonthly:checked) .toggleSwitch {
+  justify-content: flex-end;
+}
+
+.pricingToggle:has(.radioAnnually:checked) .toggleSwitch {
+  justify-content: flex-start;
+}
