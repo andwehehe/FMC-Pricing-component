@@ -1,0 +1,35 @@
+[
+  {
+    "plan": "Basic",
+    "storage": "500 GB",
+    "numberOfUsers": 2,
+    "sharableData": "3 GB",
+    "key": "basic",
+    "pricing": {
+      "monthly": 19.99,
+      "annually": 199.99
+    }
+  },
+  {
+    "plan": "Professional",
+    "storage": "1 TB",
+    "numberOfUsers": 5,
+    "sharableData": "10 GB",
+    "key": "professional",
+    "pricing": {
+      "monthly": 24.99,
+      "annually": 249.99
+    }
+  },
+  {
+    "plan": "Master",
+    "storage": "2 TB",
+    "numberOfUsers": 10,
+    "sharableData": "20 GB",
+    "key": "master",
+    "pricing": {
+      "monthly": 39.99,
+      "annually": 399.99
+    }
+  }
+]
