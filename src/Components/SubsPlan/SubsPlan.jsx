@@ -8,7 +8,7 @@ function SubsPlan({ selectedPlan }) {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const res = await fetch("/data/priceInfo.json");
+        const res = await fetch("/FMC-Pricing-component/data/priceInfo.json");
         const data = await res.json();
         setSubsPlan(data);
       } catch(error) {
