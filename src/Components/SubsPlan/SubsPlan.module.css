@@ -5,6 +5,7 @@
   align-items: center;
   gap: 1.2rem;
   width: 100%;
+  max-width: 30rem;
 }
 
 .title {
@@ -54,6 +55,67 @@ hr {
   width: 100%;
   height: 100%;
   padding-block: 1rem;
+  outline: solid transparent 0.125rem;
   border-radius: var(--card-corners);
   background: var(--gradient);
+}
+
+.professional {
+  background: var(--gradient);
+}
+
+.professional hr {
+   border-top: solid 0.1rem var(--gray-400);
+}
+
+.professional .benefits,
+.professional .price,
+.professional .title {
+  color: var(--blue-50);
+}
+
+.professional .discoverBtn {
+  color: var(--btn-font);
+  background: none;
+  background-color: var(--blue-50);
+}
+
+/* hover effects */
+.professional .discoverBtn:hover {
+  cursor: pointer;
+  color: var(--blue-50);
+  outline: solid var(--blue-50) 0.125rem;
+  background: var(--gradient);
+}
+
+ .discoverBtn:hover {
+  cursor: pointer;
+  color: var(--btn-font);
+  outline: solid var(--btn-font) 0.125rem;
+  background: none;
+  background-color: white;
+}
+
+@media (min-width: 64rem) {
+  .mainContent {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    max-width: 75vw;
+  }
+
+  .professional {
+    padding-block: 3.5rem;
+  }
+
+  .price {
+    width: 100%;
+    font-size: clamp(3rem, 5vw, 4rem);
+  }
+
+  .card {
+    max-width: 30rem;
+    padding-inline: 2rem;
+  }
 }

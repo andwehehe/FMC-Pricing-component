@@ -24,16 +24,16 @@ label {
 
 .toggleSwitch {
   display: flex;
-  width: 2.8rem;
-  height: 1.5rem;
+  width: clamp(2.8rem, 7vw, 3.5rem);
+
   border-radius: 2rem;
-  padding: 0.2rem;
+  padding: 0.25rem;
   background: var(--gradient);
 }
 
 .toggleBall {
   height: 100%;
-  width: 47%;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   background-color: var(--blue-50);
 }
@@ -44,4 +44,17 @@ label {
 
 .pricingToggle:has(.radioAnnually:checked) .toggleSwitch {
   justify-content: flex-start;
+}
+
+/* hover effects */
+.toggleSwitch:hover {
+  cursor: pointer;
+  background: var(--gradient-hover);
+}
+
+
+@media (min-width: 64rem) {
+  .toggleSwitch {
+    height: 2rem;
+  }
 }

@@ -38,12 +38,19 @@ input, button, textarea, select {
   --gray-650: hsl(234, 13%, 49%);
   --gray-700: hsl(232, 13%, 33%);
   --card-bg: hsl(0, 0%, 100%);
+  --btn-font:  hsl(238, 63%, 64%);
 
   --gradient: linear-gradient(
     135deg,
     hsl(237, 73%, 79%),
     hsl(238, 63%, 64%)
-  );
+  );  
+
+--gradient-hover: linear-gradient(
+    135deg,
+  hsl(237, 73%, 79%, 0.5),
+  hsla(238, 63%, 64%, 0.5)
+);  
 
   --fw-regular: 400;
   --fw-bold: 700;
@@ -70,9 +77,10 @@ input, button, textarea, select {
 body {
   background-color: var(--blue-50);
   background-image: url('assets/images/bg-top.svg'), url('assets/images/bg-bottom.svg');
-  background-position: top -1.7rem right -11.2rem, bottom left; 
+  background-position: top -1.7rem right -11.2rem, bottom -200% left; 
   background-repeat: no-repeat, no-repeat;      
-  background-size: clamp(22rem, 50vw, 40rem), clamp(22rem, 50vw, 40rem);                  
+  background-size: clamp(22rem, 50vw, 20rem), clamp(22rem, 50vw, 20rem); 
+  height: max-content;                 
 }
 
 .main-container {
@@ -86,3 +94,18 @@ body {
   padding: 4.5rem 1rem;
 }
 
+@media (min-width: 64rem) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-position: top right, bottom left; 
+    background-size: clamp(10rem, 30rem, 22rem), clamp(10rem, 30vw, 23rem); 
+  }
+
+  .main-container {
+    width: 100vw;
+  }
+}
